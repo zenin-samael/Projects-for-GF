@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#fbf3ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#ffe6ef" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#1e1519" media="(prefers-color-scheme: dark)">
 <meta name="description" content="A little note of gratitude, love and a sincere apology, from Samael to Maja.">
 <title>For Maja, from Samael</title>
@@ -11,12 +11,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap">
 <style>
-:root{--paper:#fbf3ee;--ink:#33292f;--muted:#7b6f76;--rose:#c25b73;--rose-dark:#92405a;--blush:#f4dcdc;--line:#ead9d3;--cream:#fffcf9;--letter-bg:#f1e3de;--hero-edge:#f4e6e0;--sage:#6f8a73;--p1:#e07a93;--p2:#ec9fb2;--p3:#f5c0cb;--p4:#cf6580;--pl:#a94b66;--leaf:#7d9c80;--gold:#e8c27a;--shadow:rgba(66,36,42,.12);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--paper:#ffe6ef;--ink:#3a2530;--muted:#80626f;--rose:#d4577b;--rose-dark:#9c3558;--blush:#ffd0e0;--line:#f6c3d4;--cream:#fff6f9;--letter-bg:#ffd9e6;--hero-edge:#ffd0e1;--dot:rgba(224,100,140,.2);--sage:#6f8a73;--p1:#e07a93;--p2:#ec9fb2;--p3:#f5c0cb;--p4:#cf6580;--pl:#a94b66;--leaf:#7d9c80;--gold:#e8c27a;--shadow:rgba(66,36,42,.12);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#1e1519;--ink:#f6e9ea;--muted:#bfadb4;--rose:#e88ca2;--rose-dark:#f2aabb;--blush:#3a2530;--line:#46333d;--cream:#2a1d24;--letter-bg:#251920;--hero-edge:#26191f;--sage:#2f4234;--p1:#e0708b;--p2:#c9627c;--p3:#a94f67;--p4:#d4627d;--pl:#7c3348;--leaf:#4f6f55;--gold:#d8b068;--shadow:rgba(0,0,0,.4)}}
 :root[data-theme="dark"]{--paper:#1e1519;--ink:#f6e9ea;--muted:#bfadb4;--rose:#e88ca2;--rose-dark:#f2aabb;--blush:#3a2530;--line:#46333d;--cream:#2a1d24;--letter-bg:#251920;--hero-edge:#26191f;--sage:#2f4234;--p1:#e0708b;--p2:#c9627c;--p3:#a94f67;--p4:#d4627d;--pl:#7c3348;--leaf:#4f6f55;--gold:#d8b068;--shadow:rgba(0,0,0,.4)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
+body{margin:0;background:var(--paper) radial-gradient(circle,var(--dot) 1.4px,transparent 2px) 0 0/26px 26px;color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
 button{font:inherit}
 svg.sprite{position:absolute;width:0;height:0}
 .petals{position:fixed;inset:0;pointer-events:none;z-index:4;overflow:hidden}
@@ -81,6 +81,25 @@ svg.sprite{position:absolute;width:0;height:0}
 .card svg{width:44px;height:44px;display:block;margin-bottom:18px}
 .card h3{font:500 1.5rem 'Playfair Display',Georgia,serif;margin:0 0 8px}
 .card p{margin:0;color:var(--muted);font-size:.94rem}
+.months{text-align:center;background:linear-gradient(180deg,var(--blush),var(--paper))}
+.months .big{font:600 clamp(7rem,28vw,15rem)/.9 'Playfair Display',Georgia,serif;color:var(--rose);letter-spacing:-.06em;margin:6px 0 0;text-shadow:0 10px 40px rgba(212,87,123,.25)}
+.months h2{margin:0 0 18px}
+.months p,.soon p{max-width:600px;margin:0 auto 14px;color:var(--muted);font-size:1.05rem}
+.tally{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:520px;margin:30px auto 0}
+.tally svg{width:34px;height:34px}
+.kitten{display:block;width:clamp(90px,16vw,130px);margin:30px auto 0;animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px) rotate(-2deg)}}
+.bow-deco{position:absolute;width:56px;z-index:-1;pointer-events:none}
+.reasons{background:var(--cream)}
+.reasons ol{list-style:none;counter-reset:r;max-width:900px;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:14px}
+.reasons li{counter-increment:r;position:relative;padding:18px 20px 18px 68px;border:1px solid var(--line);background:var(--paper);border-radius:14px;font-size:.96rem}
+.reasons li:before{content:counter(r);position:absolute;left:16px;top:50%;transform:translateY(-50%);width:36px;height:36px;border-radius:50%;background:var(--rose);color:#fff;display:grid;place-items:center;font:600 1rem 'Playfair Display',Georgia,serif}
+.reasons li b{display:block;color:var(--rose-dark);font:600 1.15rem 'Playfair Display',Georgia,serif}
+.soon{text-align:center;background:var(--letter-bg)}
+.count{display:flex;justify-content:center;gap:clamp(8px,3vw,22px);margin:34px 0 14px}
+.count div{min-width:64px;padding:14px 8px;background:var(--cream);border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 30px var(--shadow)}
+.count b{display:block;font:600 clamp(1.6rem,6vw,2.6rem)/1 'Playfair Display',Georgia,serif;color:var(--rose)}
+.count span{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .promise{background:var(--sage);color:#fff;padding:clamp(78px,11vw,130px) 24px;text-align:center;position:relative;overflow:hidden}
 .promise .bg{position:absolute;width:420px;right:-90px;bottom:-110px;opacity:.1;pointer-events:none}
 .promise .section-label{color:#f6dcd6}
@@ -124,6 +143,8 @@ svg.sprite{position:absolute;width:0;height:0}
       <path d="M2 25C25 0 70 0 98 25C70 50 25 50 2 25Z" fill="var(--leaf)"/>
       <path d="M6 25H92" stroke="#fff" stroke-opacity=".35" stroke-width="1.5"/>
     </symbol>
+    <symbol id="bow" viewBox="0 0 80 50"><g stroke="var(--pl)" stroke-opacity=".5" stroke-width="1.2"><path d="M40 25C20 2 2 4 4 25C2 46 20 48 40 25Z" fill="var(--p1)"/><path d="M40 25C60 2 78 4 76 25C78 46 60 48 40 25Z" fill="var(--p1)"/></g><circle cx="40" cy="25" r="7" fill="var(--p4)"/></symbol>
+    <symbol id="kitten" viewBox="0 0 100 110"><g stroke="#b8657c" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" fill="#fff8f3"><path d="M78 96C100 92 100 66 86 68" fill="none"/><ellipse cx="50" cy="84" rx="26" ry="22"/><ellipse cx="38" cy="103" rx="9" ry="5"/><ellipse cx="62" cy="103" rx="9" ry="5"/><path d="M22 38L27 9L49 27Z"/><path d="M78 38L73 9L51 27Z"/><ellipse cx="50" cy="48" rx="31" ry="25"/></g><path d="M29 30L31 17L41 26Z" fill="var(--p3)"/><path d="M71 30L69 17L59 26Z" fill="var(--p3)"/><g fill="none" stroke="#5b3a46" stroke-width="2.5" stroke-linecap="round"><path d="M33 47Q38 40 43 47"/><path d="M57 47Q62 40 67 47"/><path d="M50 58Q46 63 42 60M50 58Q54 63 58 60" stroke-width="2"/></g><circle cx="29" cy="55" r="5" fill="var(--p2)" opacity=".6"/><circle cx="71" cy="55" r="5" fill="var(--p2)" opacity=".6"/><path d="M47 53H53L50 58Z" fill="var(--p4)"/><use href="#bow" x="32" y="66" width="36" height="22.5"/></symbol>
     <symbol id="bouquet" viewBox="0 0 300 300">
       <use href="#leaf" x="20" y="120" width="110" height="55" transform="rotate(35 75 147)"/>
       <use href="#leaf" x="110" y="20" width="110" height="55" transform="rotate(70 165 47)"/>
@@ -152,6 +173,9 @@ svg.sprite{position:absolute;width:0;height:0}
       <h1 id="title">Thank you,<em>Maja.</em></h1>
       <p class="sub">per te, amore mio</p>
       <p>A small page for the big things I sometimes forget to say out loud. With love, from Samael.</p>
+      <svg class="kitten" style="width:96px;margin-top:22px" viewBox="0 0 100 110" aria-hidden="true"><use href="#kitten"/></svg>
+      <svg class="bow-deco" style="top:-70px;right:-30vw;transform:rotate(18deg)" viewBox="0 0 80 50" aria-hidden="true"><use href="#bow"/></svg>
+      <svg class="bow-deco" style="bottom:-10px;left:-34vw;transform:rotate(-16deg)" viewBox="0 0 80 50" aria-hidden="true"><use href="#bow"/></svg>
     </div>
     <div class="scroll-cue"><span>there’s a note for you</span><i></i></div>
   </section>
@@ -207,6 +231,35 @@ svg.sprite{position:absolute;width:0;height:0}
     </div>
   </section>
 
+  <section class="section months" id="months">
+    <div class="narrow reveal">
+      <div class="section-label">Month by month</div>
+      <div class="big">11</div>
+      <h2>months of us, Maja.</h2>
+      <p>Eleven months down, and every one of them has been better because you were in it. Through the laughs, the ups and downs and everything in between, I’d choose you again each time.</p>
+      <p>Thank you for every single month, amore mio. Here’s one pink rose for each of them.</p>
+      <div class="tally" id="tally" aria-hidden="true"></div>
+      <svg class="kitten" viewBox="0 0 100 110" aria-hidden="true"><use href="#kitten"/></svg>
+    </div>
+  </section>
+
+  <section class="section reasons">
+    <div class="gratitude-head reveal"><div class="section-label">Eleven months, eleven reasons</div><h2>Why I love you, Maja.</h2></div>
+    <ol class="reveal">
+      <li><b>Your cuddles</b>Nothing fixes a day faster, especially when you’re in your cosiest clothes.</li>
+      <li><b>Your bravery</b>You’re scared of rollercoasters and you still queue up for them.</li>
+      <li><b>Your manga</b>I love how much joy your stories bring you.</li>
+      <li><b>Our languages</b>Amore, Schatz and a bit of English: somehow it’s always perfectly clear.</li>
+      <li><b>Our fries</b>Sharing them with you is always the best part of the meal.</li>
+      <li><b>Genshin with you</b>Every adventure is better with you beside me.</li>
+      <li><b>Fortnite with you</b>Even on the nights it goes badly, I’d still pick you as my teammate.</li>
+      <li><b>Our Sprite collections</b>Comparing them with you is my favourite kind of competition.</li>
+      <li><b>Your pinky promises</b>You take them seriously, and so do I.</li>
+      <li><b>Our monthly 14ths</b>Our slightly dodgy anniversary maths, and the way we celebrate anyway.</li>
+      <li><b>You</b>Simply you, exactly as you are.</li>
+    </ol>
+  </section>
+
   <section class="section promise">
     <svg class="bg" viewBox="0 0 100 100" aria-hidden="true"><use href="#rose"/></svg>
     <div class="narrow reveal">
@@ -218,15 +271,26 @@ svg.sprite{position:absolute;width:0;height:0}
     </div>
   </section>
 
+  <section class="section soon reveal" id="soon">
+    <div class="narrow">
+      <div class="section-label">Looking forward</div>
+      <h2>Our anniversary is coming.</h2>
+      <p>I’m already looking forward to our anniversary, Maja, and I’ve set a reminder for the stroke of midnight, because I want to be the very first person to say it.</p>
+      <div class="count" aria-hidden="true"><div><b id="cd">0</b><span>days</span></div><div><b id="ch">0</b><span>hours</span></div><div><b id="cm">0</b><span>mins</span></div><div><b id="cs">0</b><span>secs</span></div></div>
+      <p id="cmsg">until the stroke of midnight on the 14th</p>
+    </div>
+  </section>
+
   <section class="closing reveal">
     <span class="heart" aria-hidden="true">♡</span>
     <h2>Ti amo, Maja.</h2>
-    <p>Thank you for being in my life.</p>
+    <p>Thank you for being in my life, and for eleven wonderful months.</p>
+    <svg class="kitten" viewBox="0 0 100 110" aria-hidden="true"><use href="#kitten"/></svg>
     <div class="signature">Always yours, with all my love<b>Samael</b></div>
   </section>
 </main>
 
-<footer class="footer">made with <span>♥</span> by Samael, for Maja</footer>
+<footer class="footer">made with <span>♥</span> by Samael, for Maja · eleven months and counting</footer>
 
 <script>
 const button=document.getElementById('letterButton');
@@ -234,6 +298,12 @@ const envelope=document.getElementById('envelope');
 button.addEventListener('click',()=>{const open=envelope.classList.toggle('open');button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Close your letter':'Open your letter')});
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.getElementById('tally').innerHTML=Array(11).fill('<svg viewBox="0 0 100 100"><use href="#rose"/></svg>').join('');
+(function(){const ids=['cd','ch','cm','cs'].map(i=>document.getElementById(i));const msg=document.getElementById('cmsg');
+function tick(){const n=new Date();if(n.getDate()===14){ids.forEach(e=>e.textContent='0');msg.textContent='Today is our day, my love. Happy anniversary.';return}
+let t=new Date(n.getFullYear(),n.getMonth(),14);if(n>t)t=new Date(n.getFullYear(),n.getMonth()+1,14);
+const d=t-n;ids[0].textContent=Math.floor(d/864e5);ids[1].textContent=Math.floor(d/36e5)%24;ids[2].textContent=Math.floor(d/6e4)%60;ids[3].textContent=Math.floor(d/1e3)%60}
+tick();setInterval(tick,1000)})();
 const box=document.getElementById('petals');
 for(let i=0;i<16;i++){const p=document.createElement('span');const s=8+Math.random()*10;p.className='petal';p.style.cssText='left:'+Math.random()*100+'%;width:'+s+'px;height:'+s*1.3+'px;animation-duration:'+(13+Math.random()*12)+'s;animation-delay:-'+Math.random()*20+'s;--dx:'+(Math.random()*160-80)+'px;'+(i%3===0?'background:var(--p2)':'');box.appendChild(p)}
 document.addEventListener('pointerdown',event=>{if(event.target.closest('button'))return;const g=document.createElement('span');g.className='spark';g.textContent=Math.random()>.5?'✿':'♡';g.style.left=event.clientX+'px';g.style.top=event.clientY+'px';g.style.setProperty('--x',(Math.random()*90-45)+'px');g.style.setProperty('--y',(-40-Math.random()*70)+'px');document.body.appendChild(g);setTimeout(()=>g.remove(),1250)});
