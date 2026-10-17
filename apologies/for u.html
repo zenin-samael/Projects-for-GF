@@ -1,0 +1,75 @@
+!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f1eb">
+  <meta name="description" content="A little note of gratitude, love, and a sincere apology.">
+  <title>A little note for you</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+    :root{--paper:#f7f1eb;--ink:#302b31;--muted:#777078;--rose:#b95f70;--rose-dark:#914452;--blush:#f0d9d6;--line:#e6d9d1;--cream:#fffdfa;--sage:#738675;--shadow:0 25px 80px #42242a18}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.7;overflow-x:hidden}
+    button{font:inherit} .grain{position:fixed;inset:0;pointer-events:none;z-index:5;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.15'/%3E%3C/svg%3E")}
+    .topline{position:absolute;top:28px;left:5vw;right:5vw;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)} .topline .mark{font-family:'Playfair Display',serif;font-size:1.15rem;letter-spacing:0;color:var(--rose-dark)}
+    .hero{min-height:95vh;position:relative;display:grid;place-items:center;padding:120px 24px 90px;text-align:center;isolation:isolate;background:radial-gradient(ellipse at 50% 52%,#fffdf9 0%,#f7f1eb 58%,#f2e7e1 100%)}
+    .hero:before,.hero:after{content:'✳';position:absolute;color:#c98b8e2b;font-size:clamp(150px,28vw,390px);line-height:1;z-index:-1;animation:turn 70s linear infinite}.hero:before{top:6%;left:-5%}.hero:after{content:'✿';right:-4%;bottom:-8%;font-size:clamp(180px,33vw,450px);animation-direction:reverse}
+    @keyframes turn{to{transform:rotate(360deg)}} @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}} @keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+    .hero-inner{max-width:800px;animation:rise 1s ease both}.eyebrow{font-size:.72rem;letter-spacing:.23em;text-transform:uppercase;color:var(--rose-dark);font-weight:700}.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,10vw,8.7rem);font-weight:500;line-height:.98;letter-spacing:-.055em;margin:26px 0 22px}.hero h1 em{font-weight:500;color:var(--rose);display:block}.hero p{max-width:520px;margin:0 auto;color:var(--muted);font-size:1.05rem}.scroll-cue{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:grid;gap:8px;justify-items:center;color:var(--muted);font-size:.65rem;letter-spacing:.16em;text-transform:uppercase}.scroll-cue span:last-child{width:1px;height:35px;background:linear-gradient(var(--rose),transparent)}
+    .section{padding:clamp(76px,12vw,150px) 24px}.narrow{max-width:720px;margin:auto}.section-label{color:var(--rose-dark);text-transform:uppercase;letter-spacing:.18em;font-size:.69rem;font-weight:700}.section h2{font:500 clamp(2.3rem,5.5vw,4.7rem)/1.1 'Playfair Display',serif;letter-spacing:-.035em;margin:14px 0 22px}.intro{text-align:center}.intro p{max-width:570px;margin:0 auto;color:var(--muted);font-size:1.05rem}
+    .letter-section{background:#efe3dd;position:relative}.letter-wrap{max-width:850px;margin:auto}.letter-heading{text-align:center;margin-bottom:42px}.envelope-button{display:block;width:min(100%,720px);margin:auto;padding:0;border:0;background:transparent;cursor:pointer;text-align:left;color:inherit;perspective:1200px}.envelope{position:relative;min-height:390px;background:var(--cream);padding:clamp(30px,7vw,72px);box-shadow:var(--shadow);border-radius:3px;overflow:hidden;transition:transform .7s cubic-bezier(.2,.8,.2,1),box-shadow .4s}.envelope:before{content:'';position:absolute;inset:14px;border:1px solid var(--line);pointer-events:none}.envelope:hover{transform:translateY(-6px) rotate(-.25deg);box-shadow:0 36px 90px #42242a22}.seal{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:var(--rose);color:white;font-size:1.3rem;margin:0 auto 24px;box-shadow:0 8px 22px #b95f703c;transition:transform .4s}.envelope-button:hover .seal{transform:scale(1.08) rotate(-10deg)}.letter-front{text-align:center;position:relative}.letter-front .to{font:italic 1.15rem 'Playfair Display',serif;color:var(--rose-dark)}.letter-front h3{font:500 clamp(2rem,5vw,3.4rem)/1.13 'Playfair Display',serif;margin:10px 0 12px}.letter-front p{color:var(--muted);margin:0}.tap-hint{margin-top:29px!important;color:var(--rose-dark)!important;font-size:.72rem!important;letter-spacing:.12em;text-transform:uppercase;font-weight:700}.letter-body{display:none;position:relative;max-width:590px;margin:40px auto 0;font:500 clamp(1.03rem,2vw,1.2rem)/1.9 'Playfair Display',serif;animation:rise .6s ease both}.letter-body p{margin:0 0 20px}.letter-body .signoff{font-style:italic;color:var(--rose-dark);margin-top:32px}.envelope.open{transform:translateY(-3px)}.envelope.open .letter-front{display:none}.envelope.open .letter-body{display:block}.envelope.open .seal{margin-bottom:10px}
+    .gratitude{background:var(--cream)}.gratitude-head{text-align:center;margin-bottom:54px}.cards{max-width:1040px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);padding:28px 25px 30px;min-height:230px;background:#fffdfa;transition:transform .3s,box-shadow .3s}.card:hover{transform:translateY(-6px);box-shadow:0 18px 45px #42242a12}.card .icon{font-size:1.65rem;display:block;margin-bottom:22px}.card h3{font:500 1.5rem 'Playfair Display',serif;margin:0 0 8px}.card p{margin:0;color:var(--muted);font-size:.93rem}.promise{background:#748678;color:#fff;padding:clamp(78px,11vw,130px) 24px;text-align:center;position:relative;overflow:hidden}.promise:after{content:'♡';position:absolute;font:400 32rem/1 'Playfair Display',serif;color:#ffffff0a;right:-60px;bottom:-180px;pointer-events:none}.promise .section-label{color:#f2d8d2}.promise h2{max-width:780px;margin:16px auto 20px}.promise p{max-width:590px;margin:0 auto;color:#ffffffd2;font-size:1rem}.promise .small{font-size:.79rem;margin-top:22px;color:#ffffffad}
+    .closing{text-align:center;padding:120px 24px 90px;background:radial-gradient(ellipse at 50% 0%,#f5e1dc,transparent 70%),var(--paper)}.closing .heart{font-size:2rem;color:var(--rose);display:inline-block;animation:heartbeat 1.6s ease-in-out infinite}.closing h2{font:500 clamp(2.8rem,8vw,6rem)/1 'Playfair Display',serif;margin:18px 0 14px;letter-spacing:-.05em}.closing p{color:var(--muted);margin:0}.closing .signature{font:italic 1.2rem 'Playfair Display',serif;color:var(--rose-dark);margin-top:30px}.footer{display:flex;justify-content:center;gap:9px;align-items:center;padding:20px;color:#91878a;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase}.footer span{color:var(--rose)}
+    .spark{position:fixed;z-index:10;pointer-events:none;color:var(--rose);animation:float 1.2s ease-out forwards}@keyframes float{from{opacity:1;transform:translate(-50%,-50%) scale(.4) rotate(0)}to{opacity:0;transform:translate(var(--x),var(--y)) scale(1.5) rotate(45deg)}}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:720px){.cards{grid-template-columns:1fr}.card{min-height:0}.hero{min-height:90vh}.topline{top:20px}.envelope{min-height:340px}.letter-body{margin-top:24px}.section{padding-left:20px;padding-right:20px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topline"><span class="mark">a little something</span><span>made with love · just for you</span></header>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <div class="hero-inner"><div class="eyebrow">For the one who makes life softer</div><h1 id="title">Thank you,<em>my love.</em></h1><p>A small page for the big things I sometimes forget to say out loud.</p></div>
+      <div class="scroll-cue"><span>there's a note for you</span><span></span></div>
+    </section>
+    <section class="section intro reveal"><div class="narrow"><div class="section-label">A little pause</div><h2>You deserve to feel seen.</h2><p>Your love means more to me than I can fit into one page. I wanted to make something that says thank you—and to say, clearly, that I’m sorry.</p></div></section>
+    <section class="section letter-section" id="letter">
+      <div class="letter-wrap"><div class="letter-heading reveal"><div class="section-label">A note from my heart</div><h2>Open when you're ready.</h2></div>
+        <button class="envelope-button reveal" id="letterButton" aria-expanded="false" aria-controls="letterBody" aria-label="Open your letter">
+          <div class="envelope" id="envelope"><div class="seal" aria-hidden="true">♡</div>
+            <div class="letter-front"><div class="to">To my favourite person</div><h3>For you, always.</h3><p>A few words I want you to hear.</p><p class="tap-hint">Tap to open&nbsp; ↓</p></div>
+            <div class="letter-body" id="letterBody">
+              <p>My love,</p>
+              <p>Thank you for loving me, for being patient with me, and for bringing so much warmth into my life. I don’t ever want to take your kindness or the way you show up for me for granted.</p>
+              <p>I’m sorry about our fight the other day. I’m especially sorry that I didn’t stop and consider how my words and actions were affecting you. Your feelings matter, and you deserved to feel heard and cared for in that moment. I understand that saying sorry doesn’t undo it; I want to listen better and show you, through what I do, that I mean it.</p>
+              <p>You don’t have to make me feel better about this or rush past it. I love you, I’m grateful for you, and I’m here when you feel ready to talk.</p>
+              <p class="signoff">With all my love,<br>your person ♡</p>
+            </div>
+          </div>
+        </button>
+      </div>
+    </section>
+    <section class="section gratitude">
+      <div class="gratitude-head reveal"><div class="section-label">The things I notice</div><h2>Thank you for being you.</h2></div>
+      <div class="cards">
+        <article class="card reveal"><span class="icon" aria-hidden="true">☼</span><h3>Your warmth</h3><p>You have a way of making ordinary days feel a little brighter. I carry that with me more than you know.</p></article>
+        <article class="card reveal"><span class="icon" aria-hidden="true">✿</span><h3>Your care</h3><p>The thought you put into the people you love is beautiful. Thank you for sharing that care with me.</p></article>
+        <article class="card reveal"><span class="icon" aria-hidden="true">☾</span><h3>Your honesty</h3><p>Thank you for letting me know how you feel. I want to make room for your truth, even when I need to hear it better.</p></article>
+      </div>
+    </section>
+    <section class="section promise"><div class="narrow reveal"><div class="section-label">What I want to keep learning</div><h2>To love you is to keep listening.</h2><p>I want to be more thoughtful with your feelings, stay curious instead of getting defensive, and make space for what’s important to you. I know care is something I need to keep showing—not just saying.</p><p class="small">No grand promises. Just a sincere intention, and the work to back it up.</p></div></section>
+    <section class="closing reveal"><span class="heart" aria-hidden="true">♡</span><h2>I love you.</h2><p>Thank you for being in my life.</p><div class="signature">Always yours, with love</div></section>
+  </main>
+  <footer class="footer">made with <span>♥</span> and a very grateful heart</footer>
+  <script>
+    const button=document.getElementById('letterButton');
+    const envelope=document.getElementById('envelope');
+    button.addEventListener('click',()=>{const open=envelope.classList.toggle('open');button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Close your letter':'Open your letter')});
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    document.addEventListener('pointerdown',event=>{if(event.target.closest('button'))return;const glyph=document.createElement('span');glyph.className='spark';glyph.textContent=Math.random()>.5?'✦':'♡';glyph.style.left=event.clientX+'px';glyph.style.top=event.clientY+'px';glyph.style.setProperty('--x',(Math.random()*90-45)+'px');glyph.style.setProperty('--y',(-40-Math.random()*70)+'px');document.body.appendChild(glyph);setTimeout(()=>glyph.remove(),1250)});
+  </script>
+</body>
+</html>
